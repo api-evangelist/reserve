@@ -1,7 +1,26 @@
 aid: reserve
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reserve.png
 name: Reserve *
-description: 'Reserve * is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Reserve was a restaurant-reservation startup backed by GV and surfaced in the
+  API Evangelist network as a consumer-sector portfolio lead. Its domain
+  reserve.com now issues an HTTP 301 redirect to resy.com, the Resy
+  restaurant-reservation platform, indicating the product has been folded into
+  Resy. During enrichment no independent developer portal, public API, OpenAPI,
+  or developer documentation was found for Reserve, and no security.txt, bug
+  bounty, or trust center is published on the domain. The profile is retained as
+  an acquired/redirected consumer-sector lead.
 url: https://raw.githubusercontent.com/api-evangelist/reserve/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +28,18 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired-redirect
+x-redirects-to: https://resy.com
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
+- Restaurants
+- Reservations
+- Dining
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +48,11 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://reserve.com
+  url: https://reserve.com
+- type: DomainSecurity
+  url: security/reserve-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
